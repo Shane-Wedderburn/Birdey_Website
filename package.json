@@ -1,0 +1,26 @@
+{
+  "name": "birdey-website",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://birdey.com.au/",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && grunt ftp_push",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "grunt": "^1.5.3",
+    "grunt-ftp-push": "^1.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
+    "grunt-ftp-deploy": "^0.2.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.7"
+  }
+}
