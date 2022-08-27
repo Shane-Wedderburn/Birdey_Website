@@ -41,7 +41,7 @@ jobs:
         # your sftp server port, default to 22
         port: 22
         # will put all file under this path
-        local_path: /html/*
+        local_path: ./html/*
         # files will copy to under remote_path
         remote_path: /home/sftp/
         # connection via sftp protocol only
