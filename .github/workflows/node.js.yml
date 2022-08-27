@@ -41,9 +41,9 @@ jobs:
         # your sftp server port, default to 22
         port: 22
         # will put all file under this path
-        local_path: ./*
+        local_path: ./html/*
         # files will copy to under remote_path
-        remote_path: /
+        remote_path: ./*
         # connection via sftp protocol only
         sftp_only: true
         # This operation will delete all files in the remote path before upload. Please be careful set this to true
