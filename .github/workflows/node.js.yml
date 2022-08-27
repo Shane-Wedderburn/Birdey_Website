@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -28,3 +28,25 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm run build --if-present
+
+    - name: SFTP Deploy
+    # You may pin to the exact commit or the version.
+    # uses: wlixcc/SFTP-Deploy-Action@da88a4dbe95286266bbac3c0b2b8284048d20c8f
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+      with:
+        # username
+        username: birdey
+        # your sftp server
+        server: birdey.com.au
+        # your sftp server port, default to 22
+        port: 22
+        # will put all file under this path
+        local_path: ./*
+        # files will copy to under remote_path
+        remote_path: ./*
+        # connection via sftp protocol only
+        sftp_only: true
+        # This operation will delete all files in the remote path before upload. Please be careful set this to true
+        delete_remote_files: false
+        # SSH passsword，If a password is set, the secret key pair is ignored
+        password: 74zrP3#,sq
