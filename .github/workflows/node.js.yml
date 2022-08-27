@@ -35,7 +35,7 @@ jobs:
       uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
         # username
-        username: birdey
+        username: sftp
         # your sftp server
         server: birdey.com.au
         # your sftp server port, default to 22
