@@ -6,7 +6,7 @@
   "homepage": "https://birdey.com.au/",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && grunt ftp_push",
+    "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
